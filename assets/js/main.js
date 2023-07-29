@@ -234,6 +234,15 @@
       }
     }
   });
+    
+// JavaScript Code
+const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+let response = await fetch("https://haa335yx3xrif6l6axft5d7swe0enzlk.lambda-url.us-east-2.on.aws/");
+let data = await response.json();
+counter.innerHTML = `Views:${data}`; 
+}
+updateCounter();
 
   /**
    * Animation on scroll
